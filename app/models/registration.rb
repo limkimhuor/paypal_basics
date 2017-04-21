@@ -6,7 +6,7 @@ class Registration < ActiveRecord::Base
   serialize :notification_params, Hash
   def paypal_url(return_path)
     values = {
-        business: "merchant@gotealeaf.com",
+        business: "kimhuorlim-facilitator@gmail.com",
         cmd: "_xclick",
         upload: 1,
         return: "#{Rails.application.secrets.app_host}#{return_path}",
