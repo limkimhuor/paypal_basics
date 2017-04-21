@@ -39,8 +39,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'activemerchant'
-
 group :development do
   gem 'guard'
   gem 'guard-livereload'
@@ -50,3 +48,7 @@ group :development do
   gem 'pry-rails'
   gem 'pry-byebug'
 end
+
+# gem "active_utils",  "2.0.2"
+gem "activemerchant", "1.50.0"
+gem "dotenv-rails"
