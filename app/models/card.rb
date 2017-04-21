@@ -12,7 +12,6 @@ class Card < ActiveRecord::Base
     response = if course.recurring
                  GATEWAY.recurring(price_in_cents, credit_card, purchase_options)
                else
-                 binding.pry
                  GATEWAY.purchase(price_in_cents, credit_card, purchase_options)
                end
     create_card_transaction(action: "purchase", amount: price_in_cents, response: response)
@@ -25,7 +24,6 @@ class Card < ActiveRecord::Base
   end
 
   private
-
   def purchase_options
     values = {
             ip: ip_address,
